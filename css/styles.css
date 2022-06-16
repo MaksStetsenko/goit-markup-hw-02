@@ -1,22 +1,48 @@
-body {
-  font-family: "Roboto", "Raleway";
-  color: #212121;
-}
 :root {
+  --main-text-color: #212121;
   --main-color: #2196f3;
+  --logo-second-color: #000000;
   --second-color: #757575;
   --hover-color: #188ce8;
   --footer-color: #2f303a;
   --footer-mail-tel-color: #ffffff99;
+  --hero-color: #ffffff;
 }
 
-/*header*/
-.web-logo {
-  font-family: "Raleway";
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+body {
+  font-family: "Roboto", "Raleway";
+  background-color: #ffffff;
+  color: var(--main-text-color);
   letter-spacing: 0.03em;
+  font-size: 14px;
+}
+
+.link {
+  text-decoration: none;
+}
+.list {
+  list-style: none;
+}
+.section-title {
+  font-size: 36px;
+  line-height: 1.16;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/*header*/
+
+.web-logo {
   color: var(--main-color);
 }
 
@@ -25,21 +51,22 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  color: black;
-  text-decoration: none;
+  color: var(--logo-second-color);
 }
 
 .navigation-link {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: black;
-  text-decoration: none;
+  color: var(--main-text-color);
 }
-
+.current {
+  color: var(--main-color);
+}
 .navigation-link:hover,
-.navigation-link:focus {
+.navigation-link:focus,
+.cont-link:hover,
+.cont-link:focus {
   color: var(--main-color);
 }
 
@@ -49,14 +76,12 @@ body {
 
 .contacts-header {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
 .contact-link {
   color: var(--second-color);
-  text-decoration: none;
 }
 
 .contact-link:hover,
@@ -67,7 +92,7 @@ body {
   color: var(--main-color);
 }
 .contact-link:visited {
-  color: #212121;
+  color: var(--main-text-color);
 }
 
 /*Main index*/
@@ -81,7 +106,7 @@ body {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--hero-color);
 }
 .head-button {
   width: 200px;
@@ -89,7 +114,7 @@ body {
   left: 700px;
   top: 430px;
   border-radius: 4px;
-  color: white;
+  color: #ffffff;
   background-color: var(--main-color);
   font-weight: 700;
   font-size: 16px;
@@ -104,67 +129,48 @@ body {
   background-color: var(--main-color);
 }
 /*About*/
+
 .about-h3 {
-  font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 .about-p {
-  font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
   color: var(--second-color);
 }
-/*work*/
-.work-h2 {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-}
+
 /*team*/
 .team {
   background-color: #f5f4fa;
 }
-.team-h2 {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-}
 .teammate {
   font-size: 16px;
   line-height: 1.18;
-  letter-spacing: 0.03em;
 }
 .proffession {
   font-size: 16px;
   line-height: 1.18;
-  letter-spacing: 0.03em;
   color: var(--second-color);
 }
 
 /*Main porfolio*/
-.portfolio {
-}
+
 /*filter*/
 .filter-button {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
-  letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--main-text-color);
 }
 .filter-button:hover,
 .filter-button:focus {
   background-color: var(--hover-color);
-  color: white;
+  color: #ffffff;
 }
-.filter-button:active {
+.active-filter {
   background-color: var(--main-color);
+  color: #ffffff;
 }
 
 /*Portfolio list*/
@@ -176,7 +182,6 @@ body {
 .portfolio-text {
   font-size: 16px;
   line-height: 1.8;
-  letter-spacing: 0.03em;
   color: var(--second-color);
 }
 
@@ -189,25 +194,17 @@ body {
   font-family: "Raleway";
   font-size: 26px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: white;
-  text-decoration: none;
+  color: #ffffff;
 }
 
 .cont-link-adress {
   font-style: normal;
-  font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
-  text-decoration: none;
   color: #ffffff;
 }
 
 .cont-link {
   font-style: normal;
-  font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
-  text-decoration: none;
   color: var(--footer-mail-tel-color);
 }
