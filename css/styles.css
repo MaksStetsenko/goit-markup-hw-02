@@ -131,6 +131,7 @@ body {
 /*About*/
 
 .about-h3 {
+  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
